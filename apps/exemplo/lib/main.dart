@@ -1,7 +1,20 @@
 import 'package:flutter/material.dart';
 
-import 'app_widget.dart';
+import 'app/views/home_view.dart';
 
 void main() {
-  runApp(AppWidget(title: 'Flutter Demo'));
+  runApp(const AppWidget());
+}
+
+class AppWidget extends StatelessWidget {
+  const AppWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: ThemeData.dark(),
+      title: 'Conversão de Moedas',
+      home: const HomeView(),
+    );
+  }
 }
