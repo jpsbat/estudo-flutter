@@ -14,7 +14,7 @@ class AppWidget extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData.dark(),
       title: 'Conversão de Moedas',
-      home: const HomeView(),
+      home: HomeView(),
     );
   }
 }
