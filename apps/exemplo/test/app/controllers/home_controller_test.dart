@@ -12,17 +12,11 @@ void main() {
     toText.text = '5.00';
     homeController.toCurrency = CurrencyModel(
       name: 'Real',
-      real: '1.00',
-      dolar: '0.20',
-      euro: '0.18',
-      bitcoin: '0.000004',
+      inReal: 1.00,
     );
     homeController.fromCurrency = CurrencyModel(
       name: 'Dólar',
-      real: '5.00',
-      dolar: '1.00',
-      euro: '0.90',
-      bitcoin: '0.00002',
+      inReal: 5.00,
     );
     homeController.convert();
     expect(fromText.text, '1.00');
@@ -31,17 +25,11 @@ void main() {
     toText.text = '1.00';
     homeController.toCurrency = CurrencyModel(
       name: 'Dólar',
-      real: '5.00',
-      dolar: '1.00',
-      euro: '0.90',
-      bitcoin: '0.00002',
+      inReal: 5.00,
     );
     homeController.fromCurrency = CurrencyModel(
       name: 'Real',
-      real: '1.00',
-      dolar: '0.20',
-      euro: '0.18',
-      bitcoin: '0.000004',
+      inReal: 1.00,
     );
     homeController.convert();
     expect(fromText.text, '5.00');

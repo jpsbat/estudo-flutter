@@ -17,14 +17,26 @@ class _HomeViewState extends State<HomeView> {
 
   late final HomeController homeController;
 
+  bool loading = true;
+
   @override
   void initState() {
     super.initState();
     homeController = HomeController(toText, fromText);
+    homeController.loadCurrencies().then((_) {
+      setState(() {loading = false;});
+    });
   }
 
   @override
   Widget build(BuildContext context) {
+    if (loading) {
+      return const Scaffold(
+        body: Center(
+          child: CircularProgressIndicator(),
+        ),
+      );
+    }
     return Scaffold(
       appBar: AppBar(title: const Text('Conversão de Moedas')),
       body: SizedBox(
