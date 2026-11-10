@@ -9,12 +9,12 @@ class CurrencyBox extends StatelessWidget {
   final void Function(CurrencyModel model) onChanged;
 
   const CurrencyBox({
-    Key? key,
+    super.key,
     required this.items,
     required this.controller,
     required this.onChanged,
     required this.selectedItem,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

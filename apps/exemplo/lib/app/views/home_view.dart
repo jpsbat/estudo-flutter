@@ -4,6 +4,8 @@ import '../components/currency_box.dart';
 import '../controllers/home_controller.dart';
 
 class HomeView extends StatefulWidget {
+  const HomeView({super.key});
+
   @override
   State<HomeView> createState() => _HomeViewState();
 }
